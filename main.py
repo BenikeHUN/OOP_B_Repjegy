@@ -358,8 +358,6 @@ def menu():
 
         except ValueError as hiba:
             print(f"Hiba: {hiba}")
-        except ValueError as hiba:
-            print(f"Adatbeviteli hiba: {hiba}")
         except Exception as hiba:
             print(f"Váratlan hiba történt: {hiba}")
 
