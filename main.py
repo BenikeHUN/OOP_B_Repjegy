@@ -246,7 +246,7 @@ def osfeltoltes():
         "HU101",
         "Debrecen",
         18000,
-        datetime.now() + timedelta(days=3),
+        datetime.now() + timedelta(days=3, hours=1),
         8
     )
 
@@ -254,7 +254,7 @@ def osfeltoltes():
         "HU202",
         "Pécs",
         16000,
-        datetime.now() + timedelta(days=5),
+        datetime.now() + timedelta(days=5, hours=2),
         8
     )
 
@@ -262,7 +262,7 @@ def osfeltoltes():
         "INT303",
         "London",
         65000,
-        datetime.now() + timedelta(days=10),
+        datetime.now() + timedelta(days=10, hours=3),
         10,
         "Egyesült Királyság"
     )
@@ -344,32 +344,24 @@ def menu():
         try:
             if valasztas == "1":
                 jaratok_kiirasa(rendszer)
-
             elif valasztas == "2":
                 jegy_foglalasa_menu(rendszer)
-
             elif valasztas == "3":
                 foglalas_lemondasa_menu(rendszer)
-
             elif valasztas == "4":
                 foglalasok_kiirasa(rendszer)
-
             elif valasztas == "0":
                 print("Kilépés a programból.")
                 break
-
             else:
                 print("Érvénytelen menüpont, próbáld újra.")
 
         except ValueError as hiba:
             print(f"Hiba: {hiba}")
-
         except ValueError as hiba:
             print(f"Adatbeviteli hiba: {hiba}")
-
         except Exception as hiba:
             print(f"Váratlan hiba történt: {hiba}")
-
 
 if __name__ == "__main__":
     menu()
